@@ -12,5 +12,6 @@ namespace WorkersCompany.Models
         public string Parentesco { get; set; }
         public int Sexo { get; set; }
         public string Rut { get; set; }
+        //psdfjpisdjifjsdjfljslkdflkjslkj
     }   
 }
