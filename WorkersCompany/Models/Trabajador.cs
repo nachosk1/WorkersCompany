@@ -13,6 +13,7 @@ namespace WorkersCompany.Models{
         public ContactosEmerg ContactosEmerg { get; set; }
         public DatosLaborales DatosLaborales { get; set; }
         public CargaFamiliar CargaFamiliar { get; set; }
+        
 
 
     }

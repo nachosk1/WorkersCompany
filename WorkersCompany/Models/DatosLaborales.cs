@@ -10,6 +10,6 @@ namespace WorkersCompany.Models
         public int Id { get; set; }
         public string Cargo { get; set; }
         public DateTime FechaIngreso { get; set; }
-        public string AreaDepartamento { get;set }
+        public string AreaDepartamento { get; set; }
     }
 }
