@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Usuario\\Source\\Repos\\nachosk1\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj": {}
+    "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Usuario\\Source\\Repos\\nachosk1\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj": {
+    "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Usuario\\Source\\Repos\\nachosk1\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
+        "projectUniqueName": "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
         "projectName": "WorkersCompany",
-        "projectPath": "C:\\Users\\Usuario\\Source\\Repos\\nachosk1\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
+        "projectPath": "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
         "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Usuario\\Source\\Repos\\nachosk1\\WorkersCompany\\WorkersCompany\\obj\\",
+        "outputPath": "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
