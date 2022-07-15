@@ -20,7 +20,7 @@ namespace WorkersCompany.Controllers
         }
 
         // GET: Trabajador
-        public async Task<IActionResult> Index(string buscar)
+        public async Task<IActionResult> Index(string buscar, int genero)
         {
             /*!*/
           
@@ -28,7 +28,7 @@ namespace WorkersCompany.Controllers
 
             if (!String.IsNullOrEmpty(buscar))
             {
-                trabajadorsBuscar = trabajadorsBuscar.Include(t => t.DatosLaborales).Where(t => t.DatosLaborales.AreaDepartamento.Contains(buscar));
+                trabajadorsBuscar = trabajadorsBuscar.Include(t => t.DatosLaborales ).Where(t => t.DatosLaborales.AreaDepartamento.Contains(buscar) || t.Nombre.Contains(buscar) || t.Rut.Contains(buscar) || t.Cargo.Contains(buscar));
             }
             var trabajadors = await _context.Trabajadors
                 .Include(t => t.ContactosEmerg)
