@@ -1368,3 +1368,4 @@ C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Wor
 C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\ref\WorkersCompany.dll
 C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\WorkersCompany.pdb
 C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\WorkersCompany.genruntimeconfig.cache
+C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Buscador.cshtml.g.cs
