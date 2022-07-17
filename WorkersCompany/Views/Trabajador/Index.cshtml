@@ -9,10 +9,8 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<form asp-action="Index" class="mb-4" method="get">
-    <input type="text" class="buscar-dep" name="buscar" placeholder="Buscador" />
-    @*<input type="text" class="buscar-rut" name="buscar" placeholder="Buscar por departamento" />*@
-    <button type="submit" value="Buscar">Buscar</button>
+<form>
+    <input type="text" class="buscar" name="buscar" placeholder="Buscador" />
     <select name="genero">
         <option value="-1">Filtrar por genero</option>
         <option value="1">Masculino</option>
@@ -35,16 +33,16 @@
                 @Html.DisplayNameFor(model => model.Cargo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.ContactosEmerg)
+                @Html.DisplayNameFor(model => model.ContactosEmerg.Numero)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DatosLaborales)
+                @Html.DisplayNameFor(model => model.DatosLaborales.FechaIngreso)
             </th>
             <th>
-                Departamento
+                @Html.DisplayNameFor(model => model.DatosLaborales.AreaDepartamento)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.CargaFamiliar)
+                @Html.DisplayNameFor(model => model.CargaFamiliar.Rut)
             </th>
             <th></th>
         </tr>
@@ -52,6 +50,7 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
+            <div id="contenido">
             <td>
                 @Html.DisplayFor(modelItem => item.Nombre)
             </td>
@@ -65,7 +64,7 @@
                 @Html.DisplayFor(modelItem => item.Cargo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ContactosEmerg.Nombre)
+                @Html.DisplayFor(modelItem => item.ContactosEmerg.Numero)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.DatosLaborales.FechaIngreso)
@@ -81,7 +80,73 @@
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
+            </div>
         </tr>
 }
     </tbody>
 </table>
+
+@section Scripts{
+    <script>
+
+
+        var buscar = document.querySelector(".buscar");
+        var tabla = document.querySelector(".table");
+        $(document).ready(() => {
+            $(buscar).keyup(() => {
+                $.ajax({
+                    url: "/Trabajador/Buscar",
+                    type: "GET",
+                    data: {
+                        buscar: $(".buscar").val()
+                    },
+                    dataType: "json",
+                    success: function (data) {
+                        $(".table").empty();
+                        $("#contenido").empty();
+                        console.log(data.value);
+                        var valor = JSON.parse(JSON.stringify(data.value));
+                         tabla = "<table class='table'><thead><tr><th>Nombre</th><th>Rut</th><th>Sexo</th><th>Cargo</th><th>Contacto Emergencia</th><th>Fecha Ingreso</th><th>Departamento</th><th>Rut Carga Familiar</th>"
+                        for (i = 0; i < valor.length; i++) {
+                            tabla += "<tr>";
+                            tabla += "<td>";
+                            tabla += valor[i].nombre;
+                            tabla += "</td>";
+                            tabla += "<td>";
+                            tabla += valor[i].rut;
+                            tabla += "</td>";
+                            tabla += "<td>";
+                            tabla += valor[i].sexo;
+                            tabla += "</td>";
+                            tabla += "<td>";
+                            tabla += valor[i].cargo;
+                            tabla += "</td>";
+                            tabla += "<td>";
+                            tabla += valor[i].contactosEmerg.numero;
+                            tabla += "</td>";
+                            tabla += "<td>";
+                            tabla += valor[i].datosLaborales.fechaIngreso;
+                            tabla += "</td>";
+                            tabla += "<td>";
+                            tabla += valor[i].datosLaborales.areaDepartamento;
+                            tabla += "</td>";
+                            tabla += "<td>";
+                            tabla += valor[i].cargaFamiliar.rut;
+                            tabla += "</td>";
+                            tabla += "</tr>";
+                        }
+                        tabla += "</tbody></table>";
+
+                        $("#contenido").empty();
+                        $("#contenido").append(tabla);
+                    },
+                    error: function () {
+                        console.log("error" + data.value);
+                    }
+
+                })
+            });
+
+        });
+    </script>
+ }
