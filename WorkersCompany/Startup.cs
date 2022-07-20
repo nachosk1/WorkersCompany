@@ -25,6 +25,9 @@ namespace WorkersCompany
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddSession();
+            services.AddDistributedMemoryCache();
+
             services.AddDbContext<YuriDBContext>(
                 item => item.UseSqlServer(Configuration.GetConnectionString("Conexion"))
                 );
@@ -42,6 +45,8 @@ namespace WorkersCompany
                 app.UseExceptionHandler("/Home/Error");
             }
             app.UseStaticFiles();
+
+            app.UseSession();
 
             app.UseRouting();
 
