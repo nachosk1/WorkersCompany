@@ -6,12 +6,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using WorkersCompany.Context;
-using WorkersCompany.Filtros;
 using WorkersCompany.Models;
 
 namespace WorkersCompany.Controllers
 {
-    [FiltroSeguridad]
     public class TrabajadorController : Controller
     {
         private readonly YuriDBContext _context;

@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,7 +35,6 @@ namespace WorkersCompany.Controllers
                            select u).FirstOrDefault();
                            
                 if (user != null){
-                    HttpContext.Session.SetString("usuario", JsonConvert.SerializeObject(usuario));
                     return RedirectToAction("Index", "Trabajador");
                 }
                 else{
