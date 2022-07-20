@@ -9,19 +9,6 @@
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<form class="mb-3">
-    <input type="text" class="buscar" name="buscar" placeholder="Buscador" />
-    <input type="date" class="buscarFecha" name="buscarFecha" placeholder="Buscador por fecha" />
-    @*<select name="genero">
-            <option value="-1">Filtrar por genero</option>
-            <option value="1">Masculino</option>
-            <option value="2">Femenino</option>
-        </select>*@
-</form>
-<div class="row ml-1 mb-3">
-    <label>Resultados:</label>
-    <label id="result" class="ml-2"></label>
-</div>
 <table class="table">
     <thead>
         <tr>
@@ -35,22 +22,7 @@
                 @Html.DisplayNameFor(model => model.Sexo)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Cargo)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ContactosEmerg.Numero)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DatosLaborales.FechaIngreso)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.DatosLaborales.AreaDepartamento)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.CargaFamiliar.Rut)
-            </th>
-            <th>
-                Acciones
+                @Html.DisplayNameFor(model => model.Estado)
             </th>
             <th></th>
         </tr>
@@ -58,114 +30,24 @@
     <tbody>
 @foreach (var item in Model) {
         <tr>
-            <div id="contenido">
             <td>
-                @Html.DisplayFor(modelItem => item.Nombre) 
+                @Html.DisplayFor(modelItem => item.Nombre)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Rut)
             </td>
             <td>
-                @*string genero = Convert.ToString(item.Sexo);*@
                 @Html.DisplayFor(modelItem => item.Sexo)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Cargo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.ContactosEmerg.Numero)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DatosLaborales.FechaIngreso)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.DatosLaborales.AreaDepartamento)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.CargaFamiliar.Rut)
+                @Html.DisplayFor(modelItem => item.Estado)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
                 <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
                 <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
             </td>
-            </div>
         </tr>
 }
     </tbody>
 </table>
-
-@section Scripts{
-    <script>
-
-        var buscar = document.querySelector(".buscar");
-        var tabla = document.querySelector(".table");
-
-        $(document).ready(() => {
-            $(buscar).keyup(() => {
-                $.ajax({
-                    url: "/Trabajador/Buscar",
-                    type: "GET",
-                    data: {
-                        buscar: $(".buscar").val()
-                    },
-                    dataType: "json",
-                    success: function (data) {
-                        let result = document.querySelector("#result");
-                        $(".table").empty();
-                        $("#contenido").empty();
-                        console.log(data.value);
-                        var valor = JSON.parse(JSON.stringify(data.value));
-                        result.innerHTML = valor.length;
-                        tabla = "<table class='table'><thead><tr><th>Nombre</th><th>Rut</th><th>Sexo</th><th>Cargo</th><th>Contacto Emergencia</th><th>Fecha Ingreso</th><th>Departamento</th><th>Rut Carga Familiar</th><th>Acciones</th>";                        
-                        for (i = 0; i < valor.length; i++) {
-                            tabla += "<tr>";
-                            tabla += "<td>";
-                            tabla += valor[i].nombre;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += valor[i].rut;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += valor[i].sexo;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += valor[i].cargo;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += valor[i].contactosEmerg.numero;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += valor[i].datosLaborales.fechaIngreso;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += valor[i].datosLaborales.areaDepartamento;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += valor[i].cargaFamiliar.rut;
-                            tabla += "</td>";
-                            tabla += "<td>";
-                            tabla += "<a href=/Trabajador/Edit/" + valor[i].id + ">Editar";
-                            tabla += "</a> | ";
-                            tabla += "<a href=/Trabajador/Details/" + valor[i].id + ">Detalles";
-                            tabla += "</a> | ";
-                            tabla += "<a href=/Trabajador/Delete/" + valor[i].id + ">Borrar";
-                            tabla += "</a>";
-                            tabla += "</td>";
-                            tabla += "</tr>";
-                        }
-                        tabla += "</tbody></table>";
-
-                        $("#contenido").empty();
-                        $("#contenido").append(tabla);
-                    },
-                    error: function () {
-                        console.log("error" + data.value);
-                    }
-
-                })
-            });
-
-        });
-    </script>
- }

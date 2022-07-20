@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WorkersCompany.Context;
 
 namespace WorkersCompany.Migrations
 {
     [DbContext(typeof(YuriDBContext))]
-    partial class YuriDBContextModelSnapshot : ModelSnapshot
+    [Migration("20220720211524_CambioBase")]
+    partial class CambioBase
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -95,13 +97,13 @@ namespace WorkersCompany.Migrations
                     b.Property<int?>("CargaFamiliarId")
                         .HasColumnType("int");
 
+                    b.Property<string>("Cargo")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("ContactosEmergId")
                         .HasColumnType("int");
 
                     b.Property<int?>("DatosLaboralesId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Estado")
                         .HasColumnType("int");
 
                     b.Property<string>("Nombre")

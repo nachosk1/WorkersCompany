@@ -10,7 +10,7 @@ namespace WorkersCompany.Models{
         public string Nombre { get; set; }
         public string Rut { get; set; }
         public int Sexo { get; set; }
-        public string Cargo { get; set; }
+        public int Estado { get; set; }
         public ContactosEmerg ContactosEmerg { get; set; }
         public DatosLaborales DatosLaborales { get; set; }
         public CargaFamiliar CargaFamiliar { get; set; }

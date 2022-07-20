@@ -7249,19 +7249,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\nacho\\.nuget\\packages\\": {}
+    "C:\\Users\\Ricardo\\.nuget\\packages\\": {},
+    "D:\\Visual SDK\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\nacho\\Desktop\\C#\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
+      "projectUniqueName": "C:\\Users\\Ricardo\\Documents\\GitHub\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
       "projectName": "WorkersCompany",
-      "projectPath": "C:\\Users\\nacho\\Desktop\\C#\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
-      "packagesPath": "C:\\Users\\nacho\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\nacho\\Desktop\\C#\\WorkersCompany\\WorkersCompany\\obj\\",
+      "projectPath": "C:\\Users\\Ricardo\\Documents\\GitHub\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
+      "packagesPath": "C:\\Users\\Ricardo\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Ricardo\\Documents\\GitHub\\WorkersCompany\\WorkersCompany\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "D:\\Visual SDK\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\nacho\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Ricardo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

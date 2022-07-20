@@ -18,40 +18,11 @@ namespace WorkersCompany.Controllers
         {
             _context = context;
         }
-        public async Task<JsonResult> Buscar(string buscar)
-        {
-            var trabajadorsBuscar = from pepe in _context.Trabajadors select pepe;
-
-            if (!String.IsNullOrEmpty(buscar))
-            {
-                trabajadorsBuscar = trabajadorsBuscar.Include(t => t.DatosLaborales).Where(t => t.DatosLaborales.AreaDepartamento.Contains(buscar) || t.Nombre.Contains(buscar) || t.Rut.Contains(buscar) || t.Cargo.Contains(buscar));
-            }
-            var trabajadors = await _context.Trabajadors
-                .Include(t => t.ContactosEmerg)
-                .ToListAsync();
-            var trabajadors2 = await _context.Trabajadors
-                .Include(t => t.DatosLaborales)
-                .ToListAsync();
-            var trabajadors3 = await _context.Trabajadors
-                .Include(t => t.CargaFamiliar)
-                .ToListAsync();
-            return Json(Ok(trabajadorsBuscar));
-        }
 
         // GET: Trabajador
         public async Task<IActionResult> Index()
         {
-            var trabajadors = await _context.Trabajadors
-                .Include(t => t.ContactosEmerg)
-                .ToListAsync();
-            var trabajadors2 = await _context.Trabajadors
-                .Include(t => t.DatosLaborales)
-                .ToListAsync();
-            var trabajadors3 = await _context.Trabajadors
-                .Include(t => t.CargaFamiliar)
-                .ToListAsync();
-            return View(trabajadors);
-            /*return View(await _context.Trabajadors.ToListAsync());*/
+            return View(await _context.Trabajadors.ToListAsync());
         }
 
         // GET: Trabajador/Details/5
@@ -83,7 +54,7 @@ namespace WorkersCompany.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Nombre,Rut,Sexo,Cargo")] Trabajador trabajador)
+        public async Task<IActionResult> Create([Bind("Id,Nombre,Rut,Sexo,Estado")] Trabajador trabajador)
         {
             if (ModelState.IsValid)
             {
@@ -115,7 +86,7 @@ namespace WorkersCompany.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Rut,Sexo,Cargo")] Trabajador trabajador)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Nombre,Rut,Sexo,Estado")] Trabajador trabajador)
         {
             if (id != trabajador.Id)
             {

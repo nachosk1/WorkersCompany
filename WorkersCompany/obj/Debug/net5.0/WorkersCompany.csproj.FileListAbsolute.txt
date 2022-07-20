@@ -434,11 +434,6 @@ C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0
 C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Usuario\Details.cshtml.g.cs
 C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Usuario\Edit.cshtml.g.cs
 C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Usuario\Index.cshtml.g.cs
-C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Create.cshtml.g.cs
-C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Delete.cshtml.g.cs
-C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Details.cshtml.g.cs
-C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Edit.cshtml.g.cs
-C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Index.cshtml.g.cs
 C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\CargaFamiliar\Create.cshtml.g.cs
 C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\CargaFamiliar\Delete.cshtml.g.cs
 C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\CargaFamiliar\Details.cshtml.g.cs
@@ -1370,3 +1365,10 @@ C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Wor
 C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\WorkersCompany.genruntimeconfig.cache
 C:\Users\Usuario\Source\Repos\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Buscador.cshtml.g.cs
 C:\Users\nacho\Desktop\C#\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Buscador.cshtml.g.cs
+C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Buscador.cshtml.g.cs
+C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Login\Login.cshtml.g.cs
+C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Create.cshtml.g.cs
+C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Delete.cshtml.g.cs
+C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Details.cshtml.g.cs
+C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Edit.cshtml.g.cs
+C:\Users\Ricardo\Documents\GitHub\WorkersCompany\WorkersCompany\obj\Debug\net5.0\Razor\Views\Trabajador\Index.cshtml.g.cs
