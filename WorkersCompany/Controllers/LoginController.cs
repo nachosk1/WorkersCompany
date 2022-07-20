@@ -18,6 +18,7 @@ namespace WorkersCompany.Controllers
         // GET: LoginController
         public IActionResult Login()
         {
+            ViewBag.Error = null;
             return View();
         }
 
@@ -37,6 +38,9 @@ namespace WorkersCompany.Controllers
                     return RedirectToAction("Index", "Trabajador");
                 }
                 else{
+                    if(!usuario.Username.Equals("") || !usuario.Password.Equals("")){
+                        ViewBag.Error = "Usuario y/o Contraseña incorrecta";
+                    }
                     return View();
                 }
             }

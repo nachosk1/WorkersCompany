@@ -7249,19 +7249,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Usuario\\.nuget\\packages\\": {}
+    "C:\\Users\\nacho\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
+      "projectUniqueName": "C:\\Users\\nacho\\Desktop\\C#\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
       "projectName": "WorkersCompany",
-      "projectPath": "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
-      "packagesPath": "C:\\Users\\Usuario\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Usuario\\Source\\Repos\\WorkersCompany\\WorkersCompany\\obj\\",
+      "projectPath": "C:\\Users\\nacho\\Desktop\\C#\\WorkersCompany\\WorkersCompany\\WorkersCompany.csproj",
+      "packagesPath": "C:\\Users\\nacho\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nacho\\Desktop\\C#\\WorkersCompany\\WorkersCompany\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Usuario\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nacho\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -7328,7 +7328,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }
