@@ -60,7 +60,8 @@ namespace WorkersCompany.Controllers
             {
                 _context.Add(cargaFamiliar);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                //return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "ContactosEmerg");
             }
             return View(cargaFamiliar);
         }
