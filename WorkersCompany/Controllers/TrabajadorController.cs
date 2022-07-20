@@ -60,7 +60,8 @@ namespace WorkersCompany.Controllers
             {
                 _context.Add(trabajador);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                return RedirectToAction("Create", "CargaFamiliar");
+               // return RedirectToAction(nameof(Index));
             }
             return View(trabajador);
         }
@@ -149,5 +150,63 @@ namespace WorkersCompany.Controllers
         {
             return _context.Trabajadors.Any(e => e.Id == id);
         }
+
+        public async Task<IActionResult> PasoFinalAsync()
+        {
+
+
+            var Carga = _context.CargaFamiliars
+               .OrderByDescending(c => c.Id)
+               .Take(1)
+               .FirstOrDefault();
+
+            var Datos = _context.DatosLaborales
+               .OrderByDescending(d => d.Id)
+                .Take(1)
+               .FirstOrDefault();
+
+            var Contact = _context.ContactosEmergs
+               .OrderByDescending(t => t.Id)
+               .Take(1)
+               .FirstOrDefault();
+
+            var Tra = _context.Trabajadors
+               .OrderByDescending(t => t.Id)
+               .Take(1)
+               .FirstOrDefault();
+
+            var User = _context.Usuarios
+               .OrderByDescending(t => t.Id)
+               .Take(1)
+               .FirstOrDefault();
+
+
+
+            var update = (from u in _context.Trabajadors
+                          where u.Id == Tra.Id
+                          select u).FirstOrDefault();
+            update.CargaFamiliar = Carga;
+            update.DatosLaborales = Datos;
+            update.ContactosEmerg = Contact;
+            _context.SaveChanges();
+
+
+            var newUser = new Usuario();
+            // newUser.Id = User.Id + 1;
+            newUser.Username = Tra.Rut;
+            newUser.Password = Tra.Nombre;
+            newUser.Trabajador = Tra;
+
+
+            _context.Usuarios.Add(newUser);
+            await _context.SaveChangesAsync();
+
+
+
+
+            return RedirectToAction("Index");
+
+        }
+
     }
 }
